@@ -1,0 +1,118 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+# Copyright (c) 2016 Sandeep Mistry All right reserved.
+# Copyright (c) 2017 Frank Holtz All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.chip=Chip
+menu.bootcode=Bootloader/SD
+menu.lfclk=Low Frequency Clock
+menu.reset=Reset
+
+# MyNRF5Board nRF52832
+# Board definition is expected in
+# MyBoard.cpp and MyBoard.h as part
+# of the sketch
+###################################
+
+MyBoard_nRF52832.name=MyNRF5Board nRF52832
+
+MyBoard_nRF52832.bootloader.tool=sandeepmistry:openocd
+
+MyBoard_nRF52832.upload.tool=sandeepmistry:openocd
+MyBoard_nRF52832.upload.target=nrf52
+MyBoard_nRF52832.upload.maximum_size=524288
+
+MyBoard_nRF52832.build.mcu=cortex-m4
+MyBoard_nRF52832.build.f_cpu=16000000
+MyBoard_nRF52832.build.board=GENERIC
+MyBoard_nRF52832.build.core=sandeepmistry:nRF5
+MyBoard_nRF52832.build.variant=MyNRF5Board
+MyBoard_nRF52832.build.variant_system_lib=
+# -I{build.path} and -DMYNRF5BOARD is only required by MyNRF5Board
+MyBoard_nRF52832.build.extra_flags=-DNRF52 -DMYNRF5BOARD -I{build.path}
+MyBoard_nRF52832.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
+MyBoard_nRF52832.build.ldscript=nrf52_xxaa.ld
+
+MyBoard_nRF52832.menu.bootcode.none=None
+MyBoard_nRF52832.menu.bootcode.none.softdevice=none
+MyBoard_nRF52832.menu.bootcode.s132=S132 (SoftDevice)
+MyBoard_nRF52832.menu.bootcode.s132.softdevice=s132
+MyBoard_nRF52832.menu.bootcode.s132.softdeviceversion=2.0.1
+MyBoard_nRF52832.menu.bootcode.s132.upload.maximum_size=409600
+MyBoard_nRF52832.menu.bootcode.s132.build.extra_flags=-DNRF52 -DS132 -DNRF51_S132 -DSOFTDEVICE_PRESENT
+MyBoard_nRF52832.menu.bootcode.s132.build.ldscript=armgcc_s132_nrf52832_xxaa.ld
+
+MyBoard_nRF52832.menu.lfclk.lfxo=Crystal Oscillator
+MyBoard_nRF52832.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+MyBoard_nRF52832.menu.lfclk.lfrc=RC Oscillator
+MyBoard_nRF52832.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+MyBoard_nRF52832.menu.lfclk.lfsynt=Synthesized
+MyBoard_nRF52832.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
+
+MyBoard_nRF52832.menu.reset.notenable=Don't enable
+MyBoard_nRF52832.menu.reset.enabled=Enable
+MyBoard_nRF52832.menu.reset.enabled.build.reset_flags=-DCONFIG_GPIO_AS_PINRESET
+
+
+# MyNRF5Board nRF51822
+# Board definition is expected in
+# MyBoard.cpp and MyBoard.h as part
+# of the sketch
+###################################
+
+MyBoard_nRF51822.name=MyNRF5Board nRF51822
+MyBoard_nRF51822.bootloader.tool=sandeepmistry:openocd
+MyBoard_nRF51822.upload.tool=sandeepmistry:openocd
+MyBoard_nRF51822.upload.target=nrf51
+MyBoard_nRF51822.upload.maximum_size=262144
+
+MyBoard_nRF51822.build.mcu=cortex-m0
+MyBoard_nRF51822.build.f_cpu=16000000
+MyBoard_nRF51822.build.board=GENERIC
+MyBoard_nRF51822.build.core=sandeepmistry:nRF5
+MyBoard_nRF51822.build.variant=MyNRF5Board
+MyBoard_nRF51822.build.variant_system_lib=
+# -I{build.path} and -DMYNRF5BOARD is only required by MyNRF5Board
+MyBoard_nRF51822.build.extra_flags=-DNRF51 -DMYNRF5BOARD -I{build.path}
+MyBoard_nRF51822.build.float_flags=
+MyBoard_nRF51822.build.ldscript=nrf51_{build.chip}.ld
+
+MyBoard_nRF51822.menu.chip.xxaa=16 kB RAM, 256 kB flash (xxaa)
+MyBoard_nRF51822.menu.chip.xxaa.build.chip=xxaa
+MyBoard_nRF51822.menu.chip.xxac=32 kB RAM, 256 kB flash (xxac)
+MyBoard_nRF51822.menu.chip.xxac.build.chip=xxac
+
+MyBoard_nRF51822.menu.bootcode.none=None
+MyBoard_nRF51822.menu.bootcode.none.softdevice=none
+MyBoard_nRF51822.menu.bootcode.s110=S110 (SoftDevice)
+MyBoard_nRF51822.menu.bootcode.s110.softdevice=s110
+MyBoard_nRF51822.menu.bootcode.s110.softdeviceversion=8.0.0
+MyBoard_nRF51822.menu.bootcode.s110.upload.maximum_size=151552
+MyBoard_nRF51822.menu.bootcode.s110.build.extra_flags=-DNRF51 -DS110 -DNRF51_S110 -DSOFTDEVICE_PRESENT
+MyBoard_nRF51822.menu.bootcode.s110.build.ldscript=armgcc_s110_nrf51822_{build.chip}.ld
+MyBoard_nRF51822.menu.bootcode.s130=S130 (SoftDevice)
+MyBoard_nRF51822.menu.bootcode.s130.softdevice=s130
+MyBoard_nRF51822.menu.bootcode.s130.softdeviceversion=2.0.1
+MyBoard_nRF51822.menu.bootcode.s130.upload.maximum_size=151552
+MyBoard_nRF51822.menu.bootcode.s130.build.extra_flags=-DNRF51 -DS130 -DNRF51_S130 -DSOFTDEVICE_PRESENT
+MyBoard_nRF51822.menu.bootcode.s130.build.ldscript=armgcc_s130_nrf51822_{build.chip}.ld
+
+MyBoard_nRF51822.menu.lfclk.lfxo=Crystal Oscillator
+MyBoard_nRF51822.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+MyBoard_nRF51822.menu.lfclk.lfrc=RC Oscillator
+MyBoard_nRF51822.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+MyBoard_nRF51822.menu.lfclk.lfsynt=Synthesized
+MyBoard_nRF51822.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
