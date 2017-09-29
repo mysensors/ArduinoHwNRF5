@@ -63,6 +63,7 @@ MyBoard_nRF52832.menu.lfclk.lfsynt=Synthesized
 MyBoard_nRF52832.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
 
 MyBoard_nRF52832.menu.reset.notenable=Don't enable
+MyBoard_nRF52832.menu.reset.notenable.build.reset_flags=
 MyBoard_nRF52832.menu.reset.enabled=Enable
 MyBoard_nRF52832.menu.reset.enabled.build.reset_flags=-DCONFIG_GPIO_AS_PINRESET
 
