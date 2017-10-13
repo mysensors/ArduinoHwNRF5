@@ -2,6 +2,12 @@
 
 Arduino hardware definitions for Mysensors nRF5 boards
 
+CI statuses
+-----------
+Current build status of master branch with respect to the master and development branch of the MySensors library: [![Build Status](https://ci.mysensors.org/job/MySensors/job/ArduinoHwNRF5/job/master/badge/icon)](https://ci.mysensors.org/job/MySensors/job/ArduinoHwNRF5/job/master/)
+
+Current build status of master branch with respect to the master and development branch of the MySensors library using the nightly build of the Arduino IDE: [![Build Status](https://ci.mysensors.org/job/MySensors-nightly-IDE/job/ArduinoHwNRF5/job/master/badge/icon)](https://ci.mysensors.org/job/MySensors-nightly-IDE/job/ArduinoHwNRF5/job/master/)
+
 ## MyNRF5Board
 
 This repository allows managing the nRF5 pin mapping as part of your code.
