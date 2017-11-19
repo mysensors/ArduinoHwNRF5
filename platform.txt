@@ -17,7 +17,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 name=MySensors nRF5 Boards
-version=0.1.0
+version=0.2.1
 
 # Path calculation
 ##################
