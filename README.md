@@ -8,7 +8,7 @@ Current build status of master branch with respect to the master and development
 
 Current build status of master branch with respect to the master and development branch of the MySensors library using the nightly build of the Arduino IDE: [![Build Status](https://ci.mysensors.org/job/MySensors-nightly-IDE/job/ArduinoHwNRF5/job/master/badge/icon)](https://ci.mysensors.org/job/MySensors-nightly-IDE/job/ArduinoHwNRF5/job/master/)
 
-## MyNRF5Board
+## MyBoardNRF5
 
 This repository allows managing the nRF5 pin mapping as part of your code.
 You can use the method for any nRF51822 or nRF52832 board or module.
@@ -24,27 +24,27 @@ To use the custom pin mapping you have to do following steps:
      https://github.com/sandeepmistry/arduino-nRF5/
   2. Install the "My Sensors nRF5 Boards" with the board manager like
      explained at https://github.com/mysensors/ArduinoBoards
-  3. Copy the files "MyNRF5Board.cpp" and "MyNRF5Board.h" from
-     "MyNRF5Board" example into your sketch.
-  4. Modify pin mappings in "MyNRF5Board.cpp" and "MyNRF5Board.h" to fit
+  3. Copy the files "MyBoardNRF5.cpp" and "MyBoardNRF5.h" from
+     "MyBoardNRF5" example into your sketch.
+  4. Modify pin mappings in "MyBoardNRF5.cpp" and "MyBoardNRF5.h" to fit
      your requirements.
-  5. Select "MyNRF5Board nrf52832" or "MyNRF5Board nrf52822" as your board.
+  5. Select "MyBoardNRF5 nrf52832" or "MyBoardNRF5 nrf52822" as your board.
      Choose the correct parameters and programmer in the Tools menu.
 
-### MyNRF5Board.h
+### MyBoardNRF5.h
 
 This file allows you to change the pins of internal hardware, like the
 serial port, SPI bus or Wire bus.
 
 All pins referenced here are mapped via the "g_ADigitalPinMap" Array
-defined in "MyNRF5Board.cpp" to pins of the MCU.
+defined in "MyBoardNRF5.cpp" to pins of the MCU.
 
 As an example, if you have at the third position in "g_ADigitalPinMap" the
 12, then all ports referenced in Arduino with 2 are mapped to P0.12. If you
 don't change the "g_ADigitalPinMap" Array, the Arduino pins 0..31 are
 translated to P0.00..P0..31.
 
-### MyNRF5Board.cpp
+### MyBoardNRF5.cpp
 
 This file allows you to change the relation between pins referenced in
 the Arduino IDE (0..31) and pins of the nRF5 MCU (P0.00..P0.31).
@@ -65,7 +65,7 @@ The pin mapping effects commands like "pinMode()", "digitalWrite()",
 "analogRead()" and "analogWrite()".
 
 If you change the pin mapping, you have to modify the pins in
-"MyNRF5Board.h". Especially the analog pin mapping must be replaced with
+"MyBoardNRF5.h". Especially the analog pin mapping must be replaced with
 your pin numbers by replacing PIN_AIN0..7 with a number of your mapping
 array. You can use the constants PIN_AIN0..7 in the "g_ADigitalPinMap"
 Array if you want to reference analog ports MCU independent. You cannot

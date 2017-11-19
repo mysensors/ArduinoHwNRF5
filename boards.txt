@@ -21,13 +21,13 @@ menu.bootcode=Bootloader/SD
 menu.lfclk=Low Frequency Clock
 menu.reset=Reset
 
-# MyNRF5Board nRF52832
+# MyBoardNRF5 nRF52832
 # Board definition is expected in
 # MyBoard.cpp and MyBoard.h as part
 # of the sketch
 ###################################
 
-MyBoard_nRF52832.name=MyNRF5Board nRF52832
+MyBoard_nRF52832.name=MyBoardNRF5 nRF52832
 
 MyBoard_nRF52832.bootloader.tool=sandeepmistry:openocd
 
@@ -39,9 +39,9 @@ MyBoard_nRF52832.build.mcu=cortex-m4
 MyBoard_nRF52832.build.f_cpu=16000000
 MyBoard_nRF52832.build.board=GENERIC
 MyBoard_nRF52832.build.core=sandeepmistry:nRF5
-MyBoard_nRF52832.build.variant=MyNRF5Board
+MyBoard_nRF52832.build.variant=MyBoardNRF5
 MyBoard_nRF52832.build.variant_system_lib=
-# -I{build.path} and -DMYNRF5BOARD is only required by MyNRF5Board
+# -I{build.path} and -DMYNRF5BOARD is only required by MyBoardNRF5
 MyBoard_nRF52832.build.extra_flags=-DNRF52 -DMYNRF5BOARD -I{build.path}
 MyBoard_nRF52832.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
 MyBoard_nRF52832.build.ldscript=nrf52_xxaa.ld
@@ -68,13 +68,13 @@ MyBoard_nRF52832.menu.reset.enabled=Enable
 MyBoard_nRF52832.menu.reset.enabled.build.reset_flags=-DCONFIG_GPIO_AS_PINRESET
 
 
-# MyNRF5Board nRF51822
+# MyBoardNRF5 nRF51822
 # Board definition is expected in
 # MyBoard.cpp and MyBoard.h as part
 # of the sketch
 ###################################
 
-MyBoard_nRF51822.name=MyNRF5Board nRF51822
+MyBoard_nRF51822.name=MyBoardNRF5 nRF51822
 MyBoard_nRF51822.bootloader.tool=sandeepmistry:openocd
 MyBoard_nRF51822.upload.tool=sandeepmistry:openocd
 MyBoard_nRF51822.upload.target=nrf51
@@ -84,9 +84,9 @@ MyBoard_nRF51822.build.mcu=cortex-m0
 MyBoard_nRF51822.build.f_cpu=16000000
 MyBoard_nRF51822.build.board=GENERIC
 MyBoard_nRF51822.build.core=sandeepmistry:nRF5
-MyBoard_nRF51822.build.variant=MyNRF5Board
+MyBoard_nRF51822.build.variant=MyBoardNRF5
 MyBoard_nRF51822.build.variant_system_lib=
-# -I{build.path} and -DMYNRF5BOARD is only required by MyNRF5Board
+# -I{build.path} and -DMYNRF5BOARD is only required by MyBoardNRF5
 MyBoard_nRF51822.build.extra_flags=-DNRF51 -DMYNRF5BOARD -I{build.path}
 MyBoard_nRF51822.build.float_flags=
 MyBoard_nRF51822.build.ldscript=nrf51_{build.chip}.ld

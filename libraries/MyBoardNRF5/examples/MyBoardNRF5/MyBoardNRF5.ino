@@ -13,11 +13,11 @@
  *    https://github.com/sandeepmistry/arduino-nRF5/
  * 2. Install the "My Sensors nRF5 Boards" with the board manager like
  *    explained at https://github.com/mysensors/ArduinoBoards
- * 3. Copy the files "MyNRF5Board.cpp" and "MyNRF5Board.h" from
- *    "MyNRF5Board" example into your sketch.
- * 4. Modify pin mappings in "MyNRF5Board.cpp" and "MyNRF5Board.h" to fit
+ * 3. Copy the files "MyBoardNRF5.cpp" and "MyBoardNRF5.h" from
+ *    "MyBoardNRF5" example into your sketch.
+ * 4. Modify pin mappings in "MyBoardNRF5.cpp" and "MyBoardNRF5.h" to fit
  *    your requirements.
- * 5. Select "MyNRF5Board nrf52832" or "MyNRF5Board nrf52822" as your board.
+ * 5. Select "MyBoardNRF5 nrf52832" or "MyBoardNRF5 nrf52822" as your board.
  *    Choose the correct parameters and programmer in the Tools menu.
  */
 
