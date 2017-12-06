@@ -41,8 +41,8 @@ MyBoard_nRF52832.build.board=GENERIC
 MyBoard_nRF52832.build.core=sandeepmistry:nRF5
 MyBoard_nRF52832.build.variant=MyBoardNRF5
 MyBoard_nRF52832.build.variant_system_lib=
-# -I{build.path} and -DMYNRF5BOARD is only required by MyBoardNRF5
-MyBoard_nRF52832.build.extra_flags=-DNRF52 -DMYNRF5BOARD -I{build.path}
+# -I{build.path} and -DMYBOARDNRF5 is only required by MyBoardNRF5
+MyBoard_nRF52832.build.extra_flags=-DNRF52 -DMYBOARDNRF5 -I{build.path}
 MyBoard_nRF52832.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
 MyBoard_nRF52832.build.ldscript=nrf52_xxaa.ld
 
@@ -86,8 +86,8 @@ MyBoard_nRF51822.build.board=GENERIC
 MyBoard_nRF51822.build.core=sandeepmistry:nRF5
 MyBoard_nRF51822.build.variant=MyBoardNRF5
 MyBoard_nRF51822.build.variant_system_lib=
-# -I{build.path} and -DMYNRF5BOARD is only required by MyBoardNRF5
-MyBoard_nRF51822.build.extra_flags=-DNRF51 -DMYNRF5BOARD -I{build.path}
+# -I{build.path} and -DMYBOARDNRF5 is only required by MyBoardNRF5
+MyBoard_nRF51822.build.extra_flags=-DNRF51 -DMYBOARDNRF5 -I{build.path}
 MyBoard_nRF51822.build.float_flags=
 MyBoard_nRF51822.build.ldscript=nrf51_{build.chip}.ld
 

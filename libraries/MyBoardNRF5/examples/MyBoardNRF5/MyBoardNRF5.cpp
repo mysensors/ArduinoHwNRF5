@@ -61,7 +61,7 @@
 
 
 
-#ifdef MYNRF5BOARD
+#ifdef MYBOARDNRF5
 #include <variant.h>
 
 /*
@@ -103,5 +103,8 @@ const PinDescription g_APinDescription[]=
   { PORT0, 30, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), ADC_A6, PWM1, NOT_ON_TIMER},
   { PORT0, 31, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), ADC_A7, PWM0, NOT_ON_TIMER}
 };
+
+// Don't remove this line
+#include <compat_pin_mapping.h>
 
 #endif
