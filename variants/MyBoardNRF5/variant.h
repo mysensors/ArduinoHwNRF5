@@ -16,8 +16,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_MYNRF5BOARD_
-#define _VARIANT_MYNRF5BOARD_
+#ifndef _VARIANT_MYBOARDNRF5_
+#define _VARIANT_MYBOARDNRF5_
 
 /*----------------------------------------------------------------------------
  *        Headers
@@ -39,11 +39,15 @@ extern "C"
 
 #ifdef MY_ARDUINO_CORE_NRF5
 /**
- * Libc porting layers
+ * Libc porting layers for arduino core variant
  */
 #if defined (  __GNUC__  )
-#    include <syscalls.h> /** RedHat Newlib minimal stub */
+#include <syscalls.h> /** RedHat Newlib minimal stub */
 #endif
+#else
+/**
+ * Compatibility for arduino-nrf5 variant
+ */
 #endif
 
 /*----------------------------------------------------------------------------
