@@ -1,6 +1,6 @@
 #!groovy
 def buildArduino(config, String buildFlags, String sketch, String key) {
-	def root              = '/opt/arduino-1.8.9/'
+	def root              = '/opt/arduino-1.8.12/'
 	if (config.nightly_arduino_ide)
 	{
 		root = '/opt/arduino-nightly/'
