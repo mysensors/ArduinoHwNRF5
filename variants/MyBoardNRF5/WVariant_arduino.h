@@ -135,11 +135,13 @@ extern const PinDescription g_APinDescription[] ;
 #endif
 #define AREF LPCOMP_REFSEL_REFSEL_ARef | (LPCOMP_EXTREFSEL_EXTREFSEL_AnalogReference0 << 16)
 
+#if defined(LPCOMP_PRESENT)
 typedef enum{
 	UP = LPCOMP_ANADETECT_ANADETECT_Up,
 	DOWN = LPCOMP_ANADETECT_ANADETECT_Down,
 	CROSS = LPCOMP_ANADETECT_ANADETECT_Cross
 }detect_mode;
+#endif
 
 
 #ifdef __cplusplus

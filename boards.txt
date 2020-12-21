@@ -67,6 +67,45 @@ MyBoard_nRF52832.menu.reset.notenable.build.reset_flags=
 MyBoard_nRF52832.menu.reset.enabled=Enable
 MyBoard_nRF52832.menu.reset.enabled.build.reset_flags=-DCONFIG_GPIO_AS_PINRESET
 
+# MyBoardNRF5 nRF52805
+# Board definition is expected in
+# MyBoard.cpp and MyBoard.h as part
+# of the sketch
+###################################
+
+MyBoard_nRF52805.name=MyBoardNRF5 nRF52805
+
+MyBoard_nRF52805.bootloader.tool=sandeepmistry:openocd
+
+MyBoard_nRF52805.upload.tool=sandeepmistry:openocd
+MyBoard_nRF52805.upload.target=nrf52
+MyBoard_nRF52805.upload.maximum_size=192000
+
+MyBoard_nRF52805.build.mcu=cortex-m4
+MyBoard_nRF52805.build.f_cpu=16000000
+MyBoard_nRF52805.build.board=GENERIC
+MyBoard_nRF52805.build.core=sandeepmistry:nRF5
+MyBoard_nRF52805.build.variant=MyBoardNRF5
+MyBoard_nRF52805.build.variant_system_lib=
+# -I{build.path} and -DMYBOARDNRF5 is only required by MyBoardNRF5
+MyBoard_nRF52805.build.extra_flags=-DNRF52805_XXAA -DNRF52 -DMYBOARDNRF5 -I{build.path}
+MyBoard_nRF52805.build.float_flags=
+MyBoard_nRF52805.build.ldscript=nrf52805_xxaa.ld
+
+MyBoard_nRF52805.menu.bootcode.none=None
+MyBoard_nRF52805.menu.bootcode.none.softdevice=none
+
+MyBoard_nRF52805.menu.lfclk.lfxo=Crystal Oscillator
+MyBoard_nRF52805.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+MyBoard_nRF52805.menu.lfclk.lfrc=RC Oscillator
+MyBoard_nRF52805.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+MyBoard_nRF52805.menu.lfclk.lfsynt=Synthesized
+MyBoard_nRF52805.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
+
+MyBoard_nRF52805.menu.reset.notenable=Don't enable
+MyBoard_nRF52805.menu.reset.notenable.build.reset_flags=
+MyBoard_nRF52805.menu.reset.enabled=Enable
+MyBoard_nRF52805.menu.reset.enabled.build.reset_flags=-DCONFIG_GPIO_AS_PINRESET
 
 # MyBoardNRF5 nRF51822
 # Board definition is expected in
